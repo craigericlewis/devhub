@@ -8,11 +8,13 @@ import Landing from "./components/layout/Landing.js";
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Navbar />
-        <Landing />
-        <Footer />
-      </div>
+      <Router>
+        <div className="App">
+          <Navbar />
+          <Route exact path="/" component={Landing} />
+          <Footer />
+        </div>
+      </Router>
     );
   }
 }
