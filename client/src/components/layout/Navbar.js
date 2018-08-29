@@ -30,7 +30,7 @@ class Navbar extends Component {
 
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
-                <Link className="nav-link" href="/register">
+                <Link className="nav-link" to="/register">
                   Sign Up
                 </Link>
               </li>
