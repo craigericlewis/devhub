@@ -15,7 +15,7 @@ import { logoutUser } from './actions/authActions';
 import Dashboard from './components/dashboard/Dashboard';
 import './App.css';
 import { clearCurrentProfile } from './actions/profileActions';
-
+import CreateProfile from './components/create-profile/CreateProfile';
 import PrivateRoute from './components/common/PrivateRoute';
 
 // Check for token
@@ -52,6 +52,9 @@ class App extends Component {
 							<Route exact path="/login" component={Login} />
 							<Switch>
 								<PrivateRoute exact path="/dashboard" component={Dashboard} />
+							</Switch>
+							<Switch>
+								<PrivateRoute exact path="/create-profile" component={CreateProfile} />
 							</Switch>
 						</div>
 						<Footer />
