@@ -16,6 +16,14 @@ class PostForm extends Component {
 		this.onSubmit = this.onSubmit.bind(this);
 	}
 
+	componentWillReceiveProps(newProps) {
+		if (newProps.errors) {
+			this.setState({ errors: newProps.errors });
+		} else {
+			this.setState({ errors: {} });
+		}
+	}
+
 	onSubmit(e) {
 		e.preventDefault();
 		const { user } = this.props.auth;
@@ -47,10 +55,10 @@ class PostForm extends Component {
 									name="text"
 									value={this.state.text}
 									onChange={this.onChange}
-									errors={errors.text}
+									error={errors.text}
 								/>
 							</div>
-							<button type="submit" className="btn btn-dark">
+							<button onClick={this.onSubmit} type="submit" className="btn btn-dark">
 								Submit
 							</button>
 						</form>
