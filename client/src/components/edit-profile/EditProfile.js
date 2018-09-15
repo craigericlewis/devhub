@@ -239,7 +239,7 @@ class CreateProfile extends Component {
 									placeholder="Short Bio"
 									name="bio"
 									value={this.state.bio}
-									onChange={this.state.bio}
+									onChange={this.state.onChange}
 									error={errors.bio}
 									info="Tell us a little about yourself"
 								/>
